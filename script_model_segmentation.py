@@ -31,7 +31,7 @@ def image_segmentation(
         img = cv2.imread("IMG_3369.JPG",cv2.COLOR_BGR2RGB)
         img = img[:,:,:3]
         X[0] = resize(img, (256, 256), mode='constant', preserve_range=True)
-        return X[0]
+        return X
 
     def dice_coefficient(y_true, y_pred):
         eps = 1e-6
